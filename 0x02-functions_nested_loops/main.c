@@ -1,12 +1,14 @@
-#include <stdio.h>
+#ifndef MAIN_H
+#define MAIN_H
 
-/**
- * main - main function
- *
- * Return: always 0;
+/*
+ * File: main.h
+ * desc: Header file contains declarations used in 0x02-functions_nested_loops 
  */
 
-int main(void)
-{
-	return (0);
-}
+int _putchar(char c);
+void print-alphabet(void);
+void print-alphabet_x10(void);
+int _islower(int c);
+
+#endif
