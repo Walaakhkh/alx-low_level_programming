@@ -3,12 +3,13 @@
 
 /*
  * File: main.h
- * Desc: Header file containing declarations used in 0x02-functions_nested_loops 
+ * Desc: Header file containing declarations used in 0x02-functions_nested_loops
+ * Return: return 1;
  */
 
 int _putchar(char c);
-void print-alphabet(void);
-void print-alphabet_x10(void);
+void print_alphabet(void);
+void print_alphabet_x10(void);
 int _islower(int c);
 int _isalpha(int c);
 int print_sign(int n);
