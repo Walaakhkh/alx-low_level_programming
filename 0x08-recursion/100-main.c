@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-    int r;
+	int r;
 
 	r = is_palindrome("level");
 	printf("%d\n", r);
