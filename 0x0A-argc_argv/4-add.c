@@ -18,11 +18,11 @@ int main(int argc, char *argv[])
 		printf("%d\n", 0);
 	else
 	{
-		for (i = 0 ; i < argc ; i++)
+		for (i = 1 ; i < argc ; i++)
 		{
 			for (j = 0 ; argv[i][j] != '\0' ; j++)
 			{
-			if (!(isdigit(argv[i][j])))
+				if (!(isdigit(argv[i][j])))
 				{
 					printf("Error\n");
 					return (1);
