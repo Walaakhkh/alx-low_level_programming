@@ -31,9 +31,9 @@ int main(int argc, char *argv[])
 			x = x - 25;
 		else if (x >= 10)
 			x = x - 10;
-		else if (x >= x - 5)
+		else if (x >= 5)
 			x = x - 5;
-		else if (x >=  2)
+		else if (x >= 2)
 			x = x - 2;
 		else if (x >= 1)
 			x = x - 1;
