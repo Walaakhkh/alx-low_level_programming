@@ -9,7 +9,7 @@
 
 void print_all(const char * const format, ...)
 {
-	int i;
+	int i = 0;
 	char *str, *sep = "";
 	va_list list;
 
@@ -43,6 +43,7 @@ void print_all(const char * const format, ...)
 			sep = ", ";
 			i++;
 		}
+		printf("\n");
 	}
 }
 
