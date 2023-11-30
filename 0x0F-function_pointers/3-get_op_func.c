@@ -2,9 +2,11 @@
 #include <stdlib.h>
 
 /**
- * get_op_func - select the correct function to preform
+ * get_op_func - select the correct function to preform the operation
+ * asked by the user
  * @s: oprator passed as argument
- * Return: pointer to function
+ * Return: pointer to function corresponding to the oparator given
+ * as a parameter
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -18,7 +20,7 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i = 0;
 
-	if (ops[i].op != NULL && *(ops[i].op) != *s)
+	while (ops[i].op != NULL && *(ops[i].op) != *s)
 	{
 		i++;
 	}
