@@ -12,8 +12,8 @@ unsigned long int _pow(unsigned int base, unsigned int power)
 	unsigned int y;
 
 	x = 1;
-	for (y = 0; y <= power; y++)
-		x += base;
+	for (y = 1; y <= power; y++)
+		x *= base;
 	return (x);
 }
 
@@ -24,23 +24,23 @@ unsigned long int _pow(unsigned int base, unsigned int power)
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int i, r;
-	char z;
+	unsigned long int d, c;
+	char f;
 
-	z = 0;
-	i = _pow(2, sizeof(unsigned long int) * 8 - 1);
-	while (i != 0)
+	f = 0;
+	d = _pow(2, sizeof(unsigned long int) * 8 - 1);
+	while (d != 0)
 	{
-		r = n & i;
-		if (r == i)
+		c = n & d;
+		if (c == d)
 		{
-			z = 1;
+			f = 1;
 			_putchar('1');
 		}
-		else if (z == 1 || i == 1)
+		else if (f == 1 || d == 1)
 		{
 			_putchar('0');
 		}
-		i >>= 1;
+		d >>= 1;
 	}
 }
