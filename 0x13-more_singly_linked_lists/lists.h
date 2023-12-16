@@ -1,6 +1,6 @@
 #ifndef LINKED
 #define LINKED
-
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
