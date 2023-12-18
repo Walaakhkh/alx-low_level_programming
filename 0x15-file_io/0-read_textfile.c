@@ -10,7 +10,7 @@
  * to the POSIX standard output
  * @filename: name of the file to read
  * @letters: number of letters to read and print
- * @Return: the actual number of letters it could read and print,
+ * Return: the actual number of letters it could read and print,
  * 0 if filename is NULL
  */
 

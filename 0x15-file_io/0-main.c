@@ -4,7 +4,8 @@
 
 /**
  * main - check the code
- *
+ * @ac: arguments counts
+ * @av: arguments vector
  * Return: Always 0.
  */
 int main(int ac, char **av)
