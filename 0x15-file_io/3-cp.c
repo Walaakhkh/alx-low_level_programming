@@ -8,10 +8,10 @@
 void check_IO_stat(int stat, int fd, char *filename, char mode);
 
 /**
- * main - the main function
+ * main - function copies the content of the file to another
  * @argc: arguments count
- * @argv: arguments vector
- * Return: 1 when success otherwise exit
+ * @argv: arguments passed
+ * Return: 1 when success, otherwise exit
  */
 int main(int argc, char *argv[])
 {
