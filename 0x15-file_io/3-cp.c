@@ -16,17 +16,17 @@ void check_IO_stat(int atat, int fd, char *filename, char mode);
 int main(int argc, char *argv[])
 {
 	int s, d, n = 1024, w, cs, cd;
-	unsigned int m = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	unsigned int mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	char b[1024];
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "%s", "Usage: cp file_from_file_to\n");
+		dprintf(STDERR_FILENO, "%s", "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	s = open(argv[1], O_RDONLY);
 	check_IO_stat(s, -1, argv[1], 'O');
-	d = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, m);
+	d = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, mode);
 	check_IO_stat(d, -1, argv[2], 'W');
 	while (n == 1024)
 	{
@@ -62,12 +62,12 @@ void check_IO_stat(int stat, int fd, char *filename, char mode)
 	}
 	else if (mode == 'O' && stat == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't close fd %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", filename);
 exit(98);
 	}
 	else if (mode == 'W' && stat == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't close fd %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: can't write to %s\n", filename);
 		exit(99);
 	}
 }
