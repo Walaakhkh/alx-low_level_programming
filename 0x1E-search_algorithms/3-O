@@ -1,0 +1,2 @@
+# Space Complexity (Worst Case) of Iterative Linear Search
+The space complexity of an iterative linear search algorithm in an array of size n is O(1).
