@@ -1,0 +1,3 @@
+# Space Complexity (Worst Case) of Binary Search
+The space complexity of an iterative binary search in an array of size n is O(1).
+The space complexity of a recursive binary search in an array of size n is O(log n).
