@@ -1,2 +1,1 @@
-# Time Complexity (Worst Case) of Linear Search
-The time complexity of a linear search in an array of size n is O(n).
+O(n)
