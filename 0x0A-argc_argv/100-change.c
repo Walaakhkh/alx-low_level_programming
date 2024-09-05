@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	x = atoi(argv[1]);
 
 	if (x < 0)
-	printf("%d\n", 0);
+	printf("0\n");
 
 	while (x > 0)
 	{
@@ -35,10 +35,11 @@ int main(int argc, char *argv[])
 	x = x - 5;
 	else if (x >= 2)
 	x = x - 2;
-	else if (x >= 1)
-	x = x - 1;
+	else
+	x -= 1;
 	y++;
 	}
+
 	printf("%d\n", y);
 	return (0);
 }
