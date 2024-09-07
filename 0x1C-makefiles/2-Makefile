@@ -1,0 +1,26 @@
+# Compiler to be used
+CC = gcc
+
+# Source files
+SRC = $(wildcard *.c)
+
+# Object files
+OBJ = $(SRC:.c=.o)
+
+# Name of the executable
+NAME = school
+
+# The default rule
+all: $(NAME)
+
+# Rule to build the executable
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Rule to build object files from source files
+%.o: %.c
+	$(CC) -c $< -o $@
+
+# Rule to clean up generated files
+clean:
+	rm -f $(OBJ) $(NAME)
