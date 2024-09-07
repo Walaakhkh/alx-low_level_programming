@@ -1,0 +1,15 @@
+# Makefile for building the school executable
+
+# The name of the executable
+TARGET = school
+
+# The default rule
+all: $(TARGET)
+
+# Rule to build the executable
+$(TARGET): main.c school.c
+	gcc main.c school.c -o $(TARGET)
+
+# Rule to clean up generated files
+clean:
+	rm -f $(TARGET)
